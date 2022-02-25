@@ -1,0 +1,23 @@
+{
+  "name": "wordle-solver",
+  "version": "1.0.0",
+  "description": "A command-line solver for your latest addiction",
+  "main": "solver.js",
+  "scripts": {
+    "start": "node solver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knazir/wordle-solver.git"
+  },
+  "keywords": [
+    "wordle"
+  ],
+  "author": "Kashif Nazir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knazir/wordle-solver/issues"
+  },
+  "homepage": "https://github.com/knazir/wordle-solver#readme"
+}
