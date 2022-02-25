@@ -11,6 +11,8 @@ You'll need Node.js to run this, not super sure what version... I'm on v16.6.2 w
 /***** Letter Guessing (FILL OUT THIS SECTION AS YOU GO) *****/
 ```
 4. Make a guess or two on the site.
+5. Run the solver using either `npm start` or `node solver.js`.
+6. The solver will give you a list of possible words.
 
 ## Optional
 If you, like me, are too lazy to manually input your guesses each time, I sure do have a terribly hacky solution for you. This is purely optional.
