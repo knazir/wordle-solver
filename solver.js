@@ -1,6 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
+/***** Global Config *****/
+const CONFIG_WORD_LENGTH = 5;
+const CONFIG_ALL_LETTERS = "abcdefghijklmnopqrstuvwxyz";
+
 /***** Create Dictionary *****/
 const validWords = new Set()
 
@@ -12,14 +16,14 @@ const validWords = new Set()
 
 // Custom Dictionary, thanks to Tushar from StackOverflow:
 // https://stackoverflow.com/questions/41768215/english-json-dictionary-with-word-word-type-and-definition
-const filenames = fs.readdirSync(path.join(__dirname, "data"), {
+const filenames = fs.readdirSync(path.join(__dirname, "data", "full"), {
     withFileTypes: true
 }).map(file => file.name).filter(filename => filename.endsWith(".json"));
 for (const filename of filenames) {
-    const contents = fs.readFileSync(path.join(__dirname, "data", filename));
+    const contents = fs.readFileSync(path.join(__dirname, "data", "full", filename));
     const dictJson = JSON.parse(contents);
     for (const word of Object.keys(dictJson)) {
-        if (word.length === 5) validWords.add(word.toLowerCase());
+        if (word.length === CONFIG_WORD_LENGTH) validWords.add(word.toLowerCase());
     }
 }
 
@@ -49,7 +53,6 @@ function isWordValid(word) {
 }
 
 /***** Letter Guessing (FILL OUT THIS SECTION AS YOU GO) *****/
-const CONFIG_ALL_LETTERS = "abcdefghijklmnopqrstuvwxyz";
 
 // 1. Which letters were incorrect?
 const CONFIG_INVALID_LETTERS = "";
@@ -82,7 +85,7 @@ const currentFinalLetters = getCurrentFinalLetters();
 /***** Generate Valid Words *****/
 function makePermutations(results, cur = "") {
     // We finished a word, let's see if it's valid
-    if (cur.length === 5) {
+    if (cur.length === CONFIG_WORD_LENGTH) {
         if (isWordValid(cur)) results.push(cur);
         return;
     }

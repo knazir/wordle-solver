@@ -1,6 +1,5 @@
 /***** Optional Browser Code for https://www.wordleunlimited.com (RUN THIS IN CONSOLE TO GET DATA) *****/
 function scrapeAndPrintConfig() {
-    let configAllLetters = "abcdefghijklmnopqrstuvwxyz";
     const configWrongSpotLetters = [new Set(), new Set(), new Set(), new Set(), new Set()];
     const configGuessedSpotLetters = ["", "", "", "", ""];
     const invalidLetters = new Set();
@@ -21,7 +20,6 @@ function scrapeAndPrintConfig() {
     }
 
     console.log(`
-const CONFIG_ALL_LETTERS = "${configAllLetters}";
 
 // 1. Which letters were incorrect?
 const CONFIG_INVALID_LETTERS = "${Array.from(invalidLetters).sort().join("")}";
