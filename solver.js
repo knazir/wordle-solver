@@ -19,7 +19,7 @@ for (const filename of filenames) {
     const contents = fs.readFileSync(path.join(__dirname, "data", filename));
     const dictJson = JSON.parse(contents);
     for (const word of Object.keys(dictJson)) {
-        validWords.add(word.toLowerCase());
+        if (word.length === 5) validWords.add(word.toLowerCase());
     }
 }
 
@@ -97,11 +97,14 @@ function makePermutations(results, cur = "") {
     // Figure out which letters we can't guess
     const lettersToGuess = new Set(allLetters);
     for (const invalidLetter of invalidLetters) {
-        lettersToGuess.delete(invalidLetter);
+        if (!currentFinalLetters.has(invalidLetter)) {
+            lettersToGuess.delete(invalidLetter);
+        }
     }
+
     const invalidLettersForSpot = wrongSpotLetters[cur.length].split("");
     for (const invalidLetter of invalidLettersForSpot) {
-        lettersToGuess.delete(invalidLettersForSpot);
+        lettersToGuess.delete(invalidLetter);
     }
     
     // Time to make some guesses
