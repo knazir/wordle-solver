@@ -28,3 +28,7 @@ for (let i = 1; i <= maxLength; i++) {
     const contents = JSON.stringify(dicts[i] || {}, null, 2);
     fs.writeFileSync(path.join(__dirname, "data", "lightweight", filename), contents);
 }
+
+const bigFilename = "D.json";
+const contents = JSON.stringify(dicts, null, 2);
+fs.writeFileSync(path.join(__dirname, "data", "lightweight", bigFilename), contents);
