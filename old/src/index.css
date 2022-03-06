@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #121213;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+code {
+  font-family: source-code-pro, monospace;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
