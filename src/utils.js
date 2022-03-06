@@ -12,7 +12,8 @@ export function getUniqueId(prefix = "__default") {
 export const LetterStatus = {
     Incorrect: "incorrect",
     Elsewhere: "elsewhere",
-    Correct: "correct"
+    Correct: "correct",
+    Empty: "empty",
 };
 
 export const useRefState = (defaultValue) => {

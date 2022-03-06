@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import Board from "./Board";
 import Header from "./Header";
@@ -10,13 +10,9 @@ import "./App.css"
 const DEFAULT_WORD_LENGTH = 5;
 
 const App = () => {
-  const [wordLength, setWordLength] = useState(DEFAULT_WORD_LENGTH);
   const [rowData, setRowData] = useState([]);
-  const stateRef = useRef();
-  stateRef.current = rowData;
 
   const onAddRow = (newRowLetters) => {
-    const rowData = stateRef.current;
     const newRowData = {
       id: getUniqueId("row"),
       letters: []
@@ -32,7 +28,6 @@ const App = () => {
   }
 
   const onDeleteRow = (rowId) => {
-    const rowData = stateRef.current;
     let deleteIndex = -1;
     for (let i = 0; i < rowData.length; i++) {
       if (rowData[i].id === rowId) {
@@ -45,11 +40,15 @@ const App = () => {
     }
   }
 
+  const onLetterStatusChange = (rowId, letterData, newStatus) {
+
+  };
+
   return (
     <>
       <Header/>
       <div className="split">
-        <Board rowData={rowData} wordLength={wordLength} onAddRow={onAddRow} onDeleteRow={onDeleteRow}/>
+        <Board rowData={rowData} onAddRow={onAddRow} onDeleteRow={onDeleteRow} wordLength={DEFAULT_WORD_LENGTH}/>
         <Suggestions rowData={rowData}/>
       </div>
     </>
