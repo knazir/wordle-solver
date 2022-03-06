@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import "./Row.css"
 
-export default ({ isFocused, onAddRow, wordLength }) => {
+const InputRow = ({ isFocused, onAddRow, wordLength }) => {
     const [letters, setLetters] = useState([]);
     const stateRef = useRef();
     stateRef.current = letters;
@@ -39,3 +39,5 @@ export default ({ isFocused, onAddRow, wordLength }) => {
         </div>
     );
 }
+
+export default InputRow;

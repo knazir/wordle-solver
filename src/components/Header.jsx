@@ -1,6 +1,6 @@
 import "./Header.css"
 
-export default () => {
+const Header = () => {
     return (
         <header>
             <i className="fa-solid fa-circle-question"/>
@@ -9,3 +9,5 @@ export default () => {
         </header>
     )
 };
+
+export default Header;

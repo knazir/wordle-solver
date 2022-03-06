@@ -9,7 +9,7 @@ import "./App.css"
 
 const DEFAULT_WORD_LENGTH = 5;
 
-export default () => {
+const App = () => {
   const [wordLength, setWordLength] = useState(DEFAULT_WORD_LENGTH);
   const [rowData, setRowData] = useState([]);
   const stateRef = useRef();
@@ -55,3 +55,5 @@ export default () => {
     </>
   );
 };
+
+export default App;

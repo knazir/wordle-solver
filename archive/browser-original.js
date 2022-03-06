@@ -36,7 +36,7 @@ const CONFIG_WRONG_SPOT_LETTERS = [
     "${Array.from(configWrongSpotLetters[2]).join("")}",
     "${Array.from(configWrongSpotLetters[3]).join("")}",
     "${Array.from(configWrongSpotLetters[4]).join("")}",
-]
+];
 
 // 3. Which letters did you guess in the correct spots?
 const CONFIG_GUESSED_SPOT_LETTERS = [

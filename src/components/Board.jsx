@@ -5,7 +5,7 @@ import Row from "./Row";
 
 import "./Board.css";
 
-export default ({ rowData, wordLength, onAddRow, onDeleteRow }) => {
+const Board =({ rowData, wordLength, onAddRow, onDeleteRow }) => {
     const [isInputRowFocused, setIsInputRowFocused] = useState(true);
     const focusedState = useRef();
     focusedState.current = isInputRowFocused;
@@ -33,3 +33,5 @@ export default ({ rowData, wordLength, onAddRow, onDeleteRow }) => {
         </div>
     );
 };
+
+export default Board;

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./Row.css"
 
-export default ({ data, onStartEditingRow, onSaveRow, onDeleteRow }) => {
+const Row = ({ data, onStartEditingRow, onSaveRow, onDeleteRow }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [letters, setLetters] = useState(data.letters.map(letterData => letterData.letter));
 
@@ -42,3 +42,5 @@ export default ({ data, onStartEditingRow, onSaveRow, onDeleteRow }) => {
         </div>
     );
 }
+
+export default Row;

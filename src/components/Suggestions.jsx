@@ -1,6 +1,6 @@
 import "./Suggestions.css";
 
-export default ({ rowData }) => {
+const Suggestions = ({ rowData }) => {
     return (
         <div className="suggestions">
             <h2>Suggestions</h2>
@@ -12,3 +12,5 @@ export default ({ rowData }) => {
         </div>
     );
 };
+
+export default Suggestions;

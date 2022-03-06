@@ -64,7 +64,7 @@ const CONFIG_WRONG_SPOT_LETTERS = [
     "",
     "",
     "",
-]
+];
 
 // 3. Which letters did you guess in the correct spots?
 const CONFIG_GUESSED_SPOT_LETTERS = [
