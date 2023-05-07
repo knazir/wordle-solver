@@ -55,21 +55,21 @@ function isWordValid(word) {
 /***** Letter Guessing (FILL OUT THIS SECTION AS YOU GO) *****/
 
 // 1. Which letters were incorrect?
-const CONFIG_INVALID_LETTERS = "";
+const CONFIG_INVALID_LETTERS = "muntiewhelpduckychkefurybnj";
 
 // 2. Which letters did you guess that were in the word but not in the correct spot?
 const CONFIG_WRONG_SPOT_LETTERS = [
-    "",
-    "",
-    "",
-    "",
-    "",
+    "r",
+    "o",
+    "or",
+    "s",
+    "o",
 ];
 
 // 3. Which letters did you guess in the correct spots?
 const CONFIG_GUESSED_SPOT_LETTERS = [
     "", 
-    "", 
+    "a", 
     "", 
     "", 
     "",

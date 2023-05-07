@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding: 0.5rem;
+
+    border-bottom: solid 1px #3a3a3c;
+
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header > *:first-child, header > *:last-child  {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+header i {
+    margin: 0 0.25rem 0 0.25rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+header i, a:visited {
+    color: white;
+}
+
+header i:hover {
+    color: lightgray;
+}
